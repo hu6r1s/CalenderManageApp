@@ -5,6 +5,7 @@ import org.spring.calendar.dto.CalendarRequestDto;
 import org.spring.calendar.dto.CalendarResponseDto;
 import org.spring.calendar.service.CalendarService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,5 +34,10 @@ public class CalendarController {
     @GetMapping("/calendar/{id}")
     public CalendarResponseDto getOne(@PathVariable Long id) {
         return calendarService.getOne(id);
+    }
+
+    @PatchMapping("/calendar/{id}")
+    public CalendarResponseDto update(@PathVariable Long id, @RequestBody CalendarRequestDto requestDto) {
+        return calendarService.update(id, requestDto);
     }
 }

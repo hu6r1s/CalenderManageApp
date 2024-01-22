@@ -37,4 +37,10 @@ public class Calendar extends Timestamped {
         this.personCharge = requestDto.getPersonCharge();
         this.password = requestDto.getPassword();
     }
+
+    public void update(CalendarRequestDto requestDto) {
+        this.title = requestDto.getTitle();
+        this.content = requestDto.getContent();
+        this.personCharge = requestDto.getPersonCharge();
+    }
 }

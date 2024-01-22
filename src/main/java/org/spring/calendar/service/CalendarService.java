@@ -30,4 +30,13 @@ public class CalendarService {
         Calendar calendar = calenderRepository.findById(id).orElse(null);
         return new CalendarResponseDto(calendar);
     }
+
+    public CalendarResponseDto update(Long id, CalendarRequestDto requestDto) {
+        Calendar calendar = calenderRepository.findById(id).orElse(null);
+        if (calendar.getPassword().equals(requestDto.getPassword())) {
+            calendar.update(requestDto);
+            calenderRepository.save(calendar);
+        }
+        return new CalendarResponseDto(calendar);
+    }
 }
