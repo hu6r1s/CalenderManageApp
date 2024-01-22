@@ -39,4 +39,14 @@ public class CalendarService {
         }
         return new CalendarResponseDto(calendar);
     }
+
+    public String delete(Long id, String password) {
+        Calendar calendar = calenderRepository.findById(id).orElse(null);
+        if (password.equals(calendar.getPassword())) {
+            calenderRepository.delete(calendar);
+            return "삭제 완료";
+        } else {
+            return "삭제 실패";
+        }
+    }
 }
