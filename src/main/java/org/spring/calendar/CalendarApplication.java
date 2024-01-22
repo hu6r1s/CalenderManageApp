@@ -1,4 +1,4 @@
-package org.spring.calender;
+package org.spring.calendar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,9 +7,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @EnableJpaAuditing
 @SpringBootApplication
-public class CalenderApplication {
+public class CalendarApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CalenderApplication.class, args);
+        SpringApplication.run(CalendarApplication.class, args);
     }
 
 }

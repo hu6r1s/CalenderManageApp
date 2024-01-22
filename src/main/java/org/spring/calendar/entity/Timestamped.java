@@ -1,4 +1,4 @@
-package org.spring.calender.entity;
+package org.spring.calendar.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

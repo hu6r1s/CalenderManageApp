@@ -1,4 +1,4 @@
-package org.spring.calender.entity;
+package org.spring.calendar.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,13 +8,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.spring.calender.dto.CalenderRequestDto;
+import org.spring.calendar.dto.CalendarRequestDto;
 
 @Entity
 @Getter
 @NoArgsConstructor
 @Table(name="calender")
-public class Calender extends Timestamped {
+public class Calendar extends Timestamped {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,7 +31,7 @@ public class Calender extends Timestamped {
     @Column(name = "password", nullable = false)
     private String password;
 
-    public Calender(CalenderRequestDto requestDto) {
+    public Calendar(CalendarRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.content = requestDto.getContent();
         this.personCharge = requestDto.getPersonCharge();

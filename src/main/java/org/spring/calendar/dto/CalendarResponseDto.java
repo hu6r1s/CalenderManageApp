@@ -1,11 +1,11 @@
-package org.spring.calender.dto;
+package org.spring.calendar.dto;
 
 import java.time.LocalDateTime;
 import lombok.Getter;
-import org.spring.calender.entity.Calender;
+import org.spring.calendar.entity.Calendar;
 
 @Getter
-public class CalenderResponseDto {
+public class CalendarResponseDto {
     private Long id;
     private String title;
     private String content;
@@ -14,7 +14,7 @@ public class CalenderResponseDto {
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
 
-    public CalenderResponseDto(Calender calender) {
+    public CalendarResponseDto(Calendar calender) {
         this.id = calender.getId();
         this.title = calender.getTitle();
         this.content = calender.getContent();
