@@ -6,6 +6,6 @@ import lombok.Getter;
 public class CalenderRequestDto {
     private String title;
     private String content;
-    private String perseonCharge;
+    private String personCharge;
     private String password;
 }
