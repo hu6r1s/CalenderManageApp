@@ -1,5 +1,6 @@
 package org.spring.calendar.service;
 
+import java.util.List;
 import org.spring.calendar.dto.CalendarRequestDto;
 import org.spring.calendar.dto.CalendarResponseDto;
 import org.spring.calendar.entity.Calendar;
@@ -18,5 +19,9 @@ public class CalendarService {
         Calendar calender = new Calendar(requestDto);
         calenderRepository.save(calender);
         return new CalendarResponseDto(calender);
+    }
+
+    public List<CalendarResponseDto> getAll() {
+        return calenderRepository.findAllByOrderByCreatedAtDesc().stream().map(CalendarResponseDto::new).toList();
     }
 }
