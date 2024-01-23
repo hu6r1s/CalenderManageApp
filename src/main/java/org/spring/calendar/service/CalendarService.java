@@ -5,7 +5,6 @@ import java.util.List;
 import org.spring.calendar.dto.CalendarRequestDto;
 import org.spring.calendar.dto.CalendarResponseDto;
 import org.spring.calendar.entity.Calendar;
-import org.spring.calendar.exception.CalendarExceptionHandler;
 import org.spring.calendar.exception.CalendarNotFoundException;
 import org.spring.calendar.exception.InvalidPasswordException;
 import org.spring.calendar.repository.CalendarRepository;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalendarService {
     private final CalendarRepository calenderRepository;
-    private CalendarExceptionHandler calendarExceptionHandler;
     public CalendarService(CalendarRepository calenderRepository) {
         this.calenderRepository = calenderRepository;
     }
