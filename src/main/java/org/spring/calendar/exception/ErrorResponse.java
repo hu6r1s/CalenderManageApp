@@ -1,15 +1,12 @@
 package org.spring.calendar.exception;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 @Getter
+@AllArgsConstructor
 public class ErrorResponse {
     private HttpStatus status;
     private String message;
-
-    public ErrorResponse(HttpStatus status, String message) {
-        this.status = status;
-        this.message = message;
-    }
 }

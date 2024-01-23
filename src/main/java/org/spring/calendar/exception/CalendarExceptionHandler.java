@@ -16,7 +16,7 @@ public class CalendarExceptionHandler {
     }
 
     @ExceptionHandler(CalendarNotFoundException.class)
-//    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<ErrorResponse> handleCalenderNotFoundException(CalendarNotFoundException e) {
         ErrorResponse errorResponse = new ErrorResponse(HttpStatus.NOT_FOUND, e.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
